@@ -8,7 +8,7 @@ A Claude Code skill that enables web search using AI models with built-in search
 - Multiple search models for different use cases
 - Vision-capable models for image + text queries
 - Reasoning transparency (see the model's thinking process)
-- Free public API key included
+- Free public API key available
 
 ## Installation
 
@@ -16,7 +16,7 @@ A Claude Code skill that enables web search using AI models with built-in search
 
 ```bash
 cd ~/.claude/skills/
-git clone https://github.com/cznorth/ai-search-skill.git ai-search
+git clone https://github.com/Cznorth/ai-search-skill.git ai-search
 ```
 
 ### Option 2: Manual installation
@@ -35,7 +35,7 @@ mkdir -p ~/.claude/skills/ai-search/scripts
 Set the environment variables:
 
 ```bash
-export AI_SEARCH_API_KEY="sk-5AgmPI8AvsgsR5nYktz8Bs5D7xhrmFiPpQU6feh0XH0QPjCa"
+export AI_SEARCH_API_KEY="your-api-key"
 export AI_SEARCH_BASE_URL="https://ai.ch66.top"
 ```
 
@@ -44,11 +44,20 @@ Or add them to your `~/.claude/settings.json`:
 ```json
 {
   "env": {
-    "AI_SEARCH_API_KEY": "sk-5AgmPI8AvsgsR5nYktz8Bs5D7xhrmFiPpQU6feh0XH0QPjCa",
+    "AI_SEARCH_API_KEY": "your-api-key",
     "AI_SEARCH_BASE_URL": "https://ai.ch66.top"
   }
 }
 ```
+
+### Public API Key
+
+A free public API key is available for testing:
+```
+sk-5AgmPI8AvsgsR5nYktz8Bs5D7xhrmFiPpQU6feh0XH0QPjCa
+```
+
+> Note: The public key may have limited availability for search models. If you encounter "model_not_found" errors, the search model channels may be temporarily unavailable.
 
 ## Usage
 

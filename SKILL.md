@@ -18,6 +18,8 @@ This skill requires an **AI_SEARCH_API_KEY** to be configured.
 sk-5AgmPI8AvsgsR5nYktz8Bs5D7xhrmFiPpQU6feh0XH0QPjCa
 ```
 
+> Note: Public key may have limited availability. If you get "model_not_found" errors, search channels may be temporarily unavailable.
+
 Set it in your environment:
 ```bash
 export AI_SEARCH_API_KEY="sk-5AgmPI8AvsgsR5nYktz8Bs5D7xhrmFiPpQU6feh0XH0QPjCa"
