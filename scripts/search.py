@@ -10,7 +10,7 @@ if sys.platform == 'win32':
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 
-def ai_search(query: str, model: str = "deepseek-reasoner-search", stream: bool = False) -> dict:
+def ai_search(query: str, model: str = "deepseek-expert-chat-search", stream: bool = False) -> dict:
     """Execute search using AI model with built-in search capability."""
     base_url = os.environ.get("AI_SEARCH_BASE_URL", "https://ai.ch66.top")
     api_key = os.environ.get("AI_SEARCH_API_KEY")
@@ -27,12 +27,15 @@ def ai_search(query: str, model: str = "deepseek-reasoner-search", stream: bool 
     payload = {
         "model": model,
         "messages": [
+            {"role": "system", "content": "你是一个具有联网搜索能力的AI助手，每次回答前请先搜索互联网获取最新信息。"},
             {"role": "user", "content": query}
         ],
-        "stream": stream
+        "stream": stream,
+        "tools": [{"type": "web_search", "web_search": {"enabled": True}}],
+        "search_enabled": True
     }
 
-    response = requests.post(url, json=payload, headers=headers, timeout=60)
+    response = requests.post(url, json=payload, headers=headers, timeout=90)
     response.raise_for_status()
     return response.json()
 
@@ -103,7 +106,7 @@ if __name__ == "__main__":
         sys.exit(1)
 
     query = parse_data["query"]
-    model = parse_data.get("model", "deepseek-reasoner-search")
+    model = parse_data.get("model", "deepseek-expert-chat-search")
     stream = parse_data.get("stream", False)
     verbose = parse_data.get("verbose", True)
 

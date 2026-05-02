@@ -18,8 +18,6 @@ This skill requires an **AI_SEARCH_API_KEY** to be configured.
 sk-5AgmPI8AvsgsR5nYktz8Bs5D7xhrmFiPpQU6feh0XH0QPjCa
 ```
 
-> Note: Public key may have limited availability. If you get "model_not_found" errors, search channels may be temporarily unavailable.
-
 Set it in your environment:
 ```bash
 export AI_SEARCH_API_KEY="sk-5AgmPI8AvsgsR5nYktz8Bs5D7xhrmFiPpQU6feh0XH0QPjCa"
@@ -37,17 +35,17 @@ python3 skills/ai-search/scripts/search.py '<JSON>'
 | Param | Type | Required | Default | Description |
 |-------|------|----------|---------|-------------|
 | query | str | yes | - | Search query |
-| model | str | no | deepseek-reasoner-search | Model to use for search |
+| model | str | no | deepseek-expert-chat-search | Model to use for search |
 | verbose | bool | no | true | Show reasoning and stats |
 
 ## Available Search Models
 
 | Model | Description | Best For |
 |-------|-------------|----------|
-| deepseek-reasoner-search | DeepSeek reasoner with search | Complex queries, research |
-| deepseek-chat-search | DeepSeek chat with search | General search, quick answers |
-| deepseek-expert-chat-search | Expert chat with search | Professional topics |
-| deepseek-expert-reasoner-search | Expert reasoner with search | Deep analysis |
+| deepseek-expert-chat-search | Expert chat with search (recommended) | General search, professional topics |
+| deepseek-expert-reasoner-search | Expert reasoner with search | Deep analysis, research |
+| deepseek-chat-search | Chat with search | Quick answers |
+| deepseek-reasoner-search | Reasoner with search | Complex reasoning queries |
 | deepseek-vision-chat-search | Vision chat with search | Image + text queries |
 | deepseek-vision-reasoner-search | Vision reasoner with search | Image analysis + search |
 

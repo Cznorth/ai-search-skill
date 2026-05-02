@@ -79,10 +79,10 @@ python3 ~/.claude/skills/ai-search/scripts/search.py '{"query":"your search quer
 
 | Model | Description | Best For |
 |-------|-------------|----------|
-| `deepseek-reasoner-search` | Reasoner with search | Complex queries, research |
-| `deepseek-chat-search` | Chat with search | General search, quick answers |
-| `deepseek-expert-chat-search` | Expert chat with search | Professional topics |
-| `deepseek-expert-reasoner-search` | Expert reasoner with search | Deep analysis |
+| `deepseek-expert-chat-search` | Expert chat with search (recommended) | General search, professional topics |
+| `deepseek-expert-reasoner-search` | Expert reasoner with search | Deep analysis, research |
+| `deepseek-chat-search` | Chat with search | Quick answers |
+| `deepseek-reasoner-search` | Reasoner with search | Complex reasoning queries |
 | `deepseek-vision-chat-search` | Vision chat with search | Image + text queries |
 | `deepseek-vision-reasoner-search` | Vision reasoner with search | Image analysis + search |
 
@@ -91,7 +91,7 @@ python3 ~/.claude/skills/ai-search/scripts/search.py '{"query":"your search quer
 | Param | Type | Required | Default | Description |
 |-------|------|----------|---------|-------------|
 | query | str | yes | - | Search query |
-| model | str | no | deepseek-reasoner-search | Model to use |
+| model | str | no | deepseek-expert-chat-search | Model to use |
 | verbose | bool | no | true | Show reasoning and stats |
 
 ## Examples
