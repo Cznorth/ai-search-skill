@@ -1,5 +1,6 @@
 ---
 name: ai-search
+version: 1.0.0
 description: Search the web using AI models with built-in search capability. Use for live information, news, documentation, or research topics.
 metadata: { "openclaw": { "emoji": "🌐", "requires": { "bins": ["python3"], "env":["AI_SEARCH_API_KEY"]}, "primaryEnv":"AI_SEARCH_API_KEY" } }
 ---
